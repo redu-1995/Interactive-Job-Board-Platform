@@ -41,7 +41,7 @@ export function JobProvider({ children }) {
         console.warn("Primary API failed, trying fallback:", primaryError);
         try {
           // Try alternative endpoint
-          response = await axios.get('http://127.0.0.1:8000/api/jobs/', { timeout: 5000 });
+          response = await axios.get(JOBS_API_URL, { timeout: 5000 });
         } catch (fallbackError) {
           console.error("Fallback API failed:", fallbackError);
           throw new Error("Failed to connect to the server");
