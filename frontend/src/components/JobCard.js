@@ -17,7 +17,7 @@ const getExperienceLabel = (level) => {
 
 const formatJobDate = (dateString) => {
   if (!dateString) return "recently";
-  console.log('Raw date string:', dateString);
+  
   try {
     const date = parseISO(dateString);
     return format(date, 'MMM dd, yyyy');
